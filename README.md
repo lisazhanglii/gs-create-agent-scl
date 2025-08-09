@@ -180,12 +180,15 @@ data/
 4. Run figma2html tool:
 Configure in .env file
 ```typescript
-OPENAI_API_KEY=
-FIGMA_TOKEN=
-FIGMA_URL=
+OPENAI_API_KEY=YOUR_OPEN_AI_KEY
+FIGMA_TOKEN= YOUR_FIGMA_TOKEN
+FIGMA_URL= FIGMA_TEMPLATE_URL
 ```
 
 Run command:
+```typescript
 npx tsx src/mastra/tools/figma2html/test-converter.ts
+```
 
 This gives you persistent storage locally and flexibility for different hosting environments!
+
