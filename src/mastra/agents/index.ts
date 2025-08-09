@@ -29,10 +29,10 @@ When a user asks you to create a LinkedIn post, use the linkedInPostTool with th
 
 Always use the tool to generate both the content and the HTML representation of the post.`,
   memory: new Memory({
-    // storage: new LibSQLStore({ url: "file::memory:" }),
-    storage: new LibSQLStore({ 
-      url: "file:./data/agent-memory.db" 
-    }),
+    storage: new LibSQLStore({ url: "file::memory:" }),
+    // storage: new LibSQLStore({ 
+    //   url: "file:./data/agent-memory.db" 
+    // }),
     options: {
       workingMemory: {
         enabled: true,

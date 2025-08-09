@@ -10,8 +10,8 @@ export const mastra = new Mastra({
     linkedInPostAgent
   },
   storage: new LibSQLStore({
-    // url: ":memory:"
-    url: "file:./data/mastra.db" 
+    url: ":memory:"
+    // url: "file:./data/mastra.db" 
   }),
   logger: new ConsoleLogger({
     level: LOG_LEVEL,
