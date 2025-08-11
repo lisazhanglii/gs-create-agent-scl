@@ -790,11 +790,11 @@ class FigmaToHtmlConverter {
       .map(child => this.generateElementHtml(child))
       .join('');
 
-    if (element.content) {
-      return `<${element.tag} ${attributes}>${element.content}${childrenHtml}</${element.tag}>`;
-    } else {
-      return `<${element.tag} ${attributes}>${childrenHtml}</${element.tag}>`;
-    }
+      if (element.content) {
+        return `<div ${attributes} data-line="821"><${element.tag}>${element.content}${childrenHtml}</${element.tag}></div>`;
+      } else {
+        return `<div ${attributes} data-line="823"><${element.tag} >${childrenHtml}</${element.tag}></div>`;
+      }
   }
 
   /**
