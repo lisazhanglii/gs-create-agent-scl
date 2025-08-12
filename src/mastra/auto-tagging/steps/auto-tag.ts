@@ -28,7 +28,7 @@ HTML Content:
 ${htmlContent}
 \`\`\`
 
-Replace text content and image sources with appropriate template placeholders ({{image}}, {{cta}}, {{on_image_text}}) while preserving all HTML structure and CSS.
+Replace text content and image sources with appropriate template placeholders ({{headline}}, {{image}}, {{cta}}, {{on_image_text}}) while preserving all HTML structure and CSS.
 
 Return ONLY the complete modified HTML in the autoTaggedHtml field.
               `,
