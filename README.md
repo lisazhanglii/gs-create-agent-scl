@@ -159,25 +159,17 @@ export const mastra = new Mastra({
 
 ## **Quick Setup for Local Development:**
 
-1. Create data directory:
-```bash
-mkdir data
-```
-
-2. Update your configuration:
+1. Install dependency 
 ```typescript
-storage: new LibSQLStore({
-  url: "file:./data/mastra.db"
-})
+npm install 
 ```
 
-3. Add to `.gitignore`:
-```
-data/
-*.db
+2. Run the workflow
+```typescript
+npm run dev
 ```
 
-4. Run figma2html tool:
+3. To run figma2html tool:
 Configure in .env file
 ```typescript
 OPENAI_API_KEY=YOUR_OPEN_AI_KEY
@@ -185,9 +177,23 @@ FIGMA_TOKEN= YOUR_FIGMA_TOKEN
 FIGMA_URL= FIGMA_TEMPLATE_URL
 ```
 
-Run command:
+4. Generate HTML Fire from FIGMA_URL configured in .env file
+```typescript
+npm run test:figma2html
+```
+if not work, run 
 ```typescript
 npx tsx src/mastra/tools/figma2html/test-converter.ts
+```
+
+5. Next stem is to use agent to run autotagger for html file 
+```typescript
+npm run test:autotagger
+```
+if shows error of missing ai model key:
+run 
+```typescript
+export $(cat .env | xargs) && npm run test:autotagger
 ```
 
 This gives you persistent storage locally and flexibility for different hosting environments!
