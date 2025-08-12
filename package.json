@@ -10,8 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:figma2html": "npx tsx src/mastra/tools/figma2html/test-converter.ts",
-    "test:autotagger": "npx tsx src/mastra/test-autotagger.ts"
+    "test:figma2html": "export $(cat .env | xargs) && npx tsx src/mastra/tools/figma2html/test-converter.ts",
+    "test:autotagger": "export $(cat .env | xargs) && npx tsx src/mastra/test-autotagger.ts"
   },
   "dependencies": {
     "@ag-ui/mastra": "0.0.4",

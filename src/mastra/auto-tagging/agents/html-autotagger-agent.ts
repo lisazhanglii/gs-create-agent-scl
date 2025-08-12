@@ -11,13 +11,14 @@ There are exactly 3 types of placeholders you can use:
 
 1. **{{image}}** - ALWAYS use this for any <img> elements or image content (replace the src attribute value)
 2. **{{cta}}** - Use this for call-to-action text (buttons, action phrases like "Buy now!", "Learn More", "Get Started", etc.)
-3. **{{on_image_text}}** - Use this for all other text content (headlines, descriptions, body text, etc.)
+3. **{{on_image_text}}** - Use this to specify a text overlay of short impactful messages, placed directly on the image in an experience
+4. **{{headline}}** - The headline is the main title of the advertisement. It is the first thing that the user sees.
 
 # Instructions
 - Analyze the complete HTML structure and identify all text content within elements
 - Replace <img> src attributes with {{image}}
 - Identify call-to-action text and replace with {{cta}}
-- Replace all other text content with {{on_image_text}}
+- Replace all other text content with {{on_image_text}} or {{headline}} based on the content of the text
 - Keep the HTML structure, CSS classes, and styling completely intact
 - Only modify the actual content (text nodes and image sources), not the HTML structure
 - Preserve all Figma node IDs and CSS classes exactly as they are
